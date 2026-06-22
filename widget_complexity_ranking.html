@@ -1,0 +1,156 @@
+
+<h2 class="sr-only">Widget complexity ranking from simplest to most complex, organized into three tiers</h2>
+<style>
+.tier { margin-bottom: 2rem; }
+.tier-label { font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-tertiary); margin: 0 0 10px; padding-left: 4px; }
+.widget-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 8px; }
+.rank { font-size: 13px; font-weight: 500; color: var(--color-text-tertiary); min-width: 20px; }
+.widget-info { flex: 1; }
+.widget-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+.widget-desc { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+.bar-wrap { width: 140px; }
+.bar-bg { background: var(--color-background-secondary); border-radius: 4px; height: 6px; width: 100%; }
+.bar { height: 6px; border-radius: 4px; }
+.token-label { font-size: 11px; color: var(--color-text-tertiary); margin-top: 3px; text-align: right; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+.b-easy { background: #EAF3DE; color: #3B6D11; }
+.b-med { background: #FAEEDA; color: #854F0B; }
+.b-hard { background: #FCEBEB; color: #A32D2D; }
+@media (prefers-color-scheme: dark) {
+  .b-easy { background: #27500A; color: #C0DD97; }
+  .b-med { background: #633806; color: #FAC775; }
+  .b-hard { background: #791F1F; color: #F7C1C1; }
+}
+</style>
+
+<div class="tier">
+  <p class="tier-label">Tier 1 — Easiest</p>
+
+  <div class="widget-row">
+    <span class="rank">1</span>
+    <div class="widget-info">
+      <p class="widget-name">Pixel art / stamps</p>
+      <p class="widget-desc">Static 88×31 button images with a link wrapper</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:8%; background:#639922;"></div></div>
+      <p class="token-label">~80 tokens</p>
+    </div>
+    <span class="badge b-easy">Easy</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">2</span>
+    <div class="widget-info">
+      <p class="widget-name">Floating social buttons</p>
+      <p class="widget-desc">Fixed-position icon links, CSS hover only</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:14%; background:#639922;"></div></div>
+      <p class="token-label">~150 tokens</p>
+    </div>
+    <span class="badge b-easy">Easy</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">3</span>
+    <div class="widget-info">
+      <p class="widget-name">Webring nav bar</p>
+      <p class="widget-desc">Previous / home / next links with minimal JS</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:18%; background:#639922;"></div></div>
+      <p class="token-label">~200 tokens</p>
+    </div>
+    <span class="badge b-easy">Easy</span>
+  </div>
+
+</div>
+
+<div class="tier">
+  <p class="tier-label">Tier 2 — Moderate</p>
+
+  <div class="widget-row">
+    <span class="rank">4</span>
+    <div class="widget-info">
+      <p class="widget-name">Custom clock / calendar</p>
+      <p class="widget-desc">setInterval loop, date formatting, CSS theming</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:32%; background:#BA7517;"></div></div>
+      <p class="token-label">~350 tokens</p>
+    </div>
+    <span class="badge b-med">Moderate</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">5</span>
+    <div class="widget-info">
+      <p class="widget-name">FX particles</p>
+      <p class="widget-desc">Canvas loop, dot positions, proximity line drawing</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:45%; background:#BA7517;"></div></div>
+      <p class="token-label">~500 tokens</p>
+    </div>
+    <span class="badge b-med">Moderate</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">6</span>
+    <div class="widget-info">
+      <p class="widget-name">Lightweight animations (Lottie-style)</p>
+      <p class="widget-desc">SVG or CSS keyframes, multiple states, loop control</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:52%; background:#BA7517;"></div></div>
+      <p class="token-label">~580 tokens</p>
+    </div>
+    <span class="badge b-med">Moderate</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">7</span>
+    <div class="widget-info">
+      <p class="widget-name">Instagram / photo slider</p>
+      <p class="widget-desc">Touch/drag events, transition logic, responsive grid</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:62%; background:#BA7517;"></div></div>
+      <p class="token-label">~700 tokens</p>
+    </div>
+    <span class="badge b-med">Moderate</span>
+  </div>
+
+</div>
+
+<div class="tier">
+  <p class="tier-label">Tier 3 — Complex</p>
+
+  <div class="widget-row">
+    <span class="rank">8</span>
+    <div class="widget-info">
+      <p class="widget-name">Guestbook / chatbox</p>
+      <p class="widget-desc">Form, local/remote state, entry list, timestamps</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:76%; background:#A32D2D;"></div></div>
+      <p class="token-label">~850 tokens</p>
+    </div>
+    <span class="badge b-hard">Complex</span>
+  </div>
+
+  <div class="widget-row">
+    <span class="rank">9</span>
+    <div class="widget-info">
+      <p class="widget-name">Virtual pet</p>
+      <p class="widget-desc">State machine, animations, hunger/mood timers, persistence</p>
+    </div>
+    <div class="bar-wrap">
+      <div class="bar-bg"><div class="bar" style="width:100%; background:#A32D2D;"></div></div>
+      <p class="token-label">~1,100+ tokens</p>
+    </div>
+    <span class="badge b-hard">Complex</span>
+  </div>
+
+</div>
